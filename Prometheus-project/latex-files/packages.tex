@@ -1,0 +1,93 @@
+\usepackage[]{algorithm2e}
+\usepackage{cite}
+\usepackage{calc}
+\usepackage{minted}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage{color}
+\usepackage{ragged2e}
+\usepackage[inline]{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{hyperref}
+\usepackage{xepersian}
+\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\settextfont[BoldFont={XB Yas Bd}, ItalicFont={XB Yas It}, BoldItalicFont={XB Yas BdIt}, Extension = .ttf]{XB Yas}
+
+\fancyhead[L]{\includegraphics[scale = 0.07]{images/IUST_logo_color.png}}
+\fancyhead[R]{\large \Course}
+\fancyhead[C]{\Large \Subject}
+\renewcommand{\headrulewidth}{0.5mm}
+\pagestyle{fancy}
+\setlength{\headheight}{28pt}
+
+\setminted{
+    frame=lines,
+    framesep=2mm,
+    baselinestretch=1.0,
+    xrightmargin=0in,
+    xleftmargin=0in,
+    fontsize=\footnotesize,
+    linenos=false
+}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{white},
+    commentstyle=\color{green},
+    keywordstyle=\color{blue},
+    numberstyle=\tiny\color{gray},
+    stringstyle=\color{red},
+    basicstyle=\ttfamily\small,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    literate=%
+        {0}{{0}}1
+        {1}{{1}}1
+        {2}{{2}}1
+        {3}{{3}}1
+        {4}{{4}}1
+        {5}{{5}}1
+        {6}{{6}}1
+        {7}{{7}}1
+        {8}{{8}}1
+        {9}{{9}}1
+        {.0}{{.0}}2
+        {.1}{{.1}}2
+        {.2}{{.2}}2
+        {.3}{{.3}}2
+        {.4}{{.4}}2
+        {.5}{{.5}}2
+        {.6}{{.6}}2
+        {.7}{{.7}}2
+        {.8}{{.8}}2
+        {.9}{{.9}}2
+}
+
+\lstset{style=mystyle}
+
+
+\newcommand{\grayBox}[1]{\colorbox{gray!10}{\lr{\texttt{#1}}}}
+\newcommand{\grayLBox}[1]{\fbox{\grayBox{\parbox{11.8 cm}{#1}}}}
+
+\makeatletter
+\newcommand{\chapterauthor}[1]{%
+    {\parindent0pt\vspace*{-25pt}%
+        \linespread{1.1}\large\scshape#1%
+        \par\nobreak\vspace*{35pt}}
+    \@afterheading%
+}
+\makeatother
